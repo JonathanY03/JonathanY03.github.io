@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Projects</title>
+		<script src="sort.js" async></script>
+		<link rel="stylesheet" href="../../portfolio_style.css" />
+	</head>
+	<header>
+		<h1>Portfolio</h1>
+	</header>
+	<nav>
+		<ul>
+			<li><a href="../../resume">Resume</a></li>
+			<li><a href=".." style="color:white;background-color:black;">Projects</a></li>
+			<li><a href="../../skills">Skills</a></li>
+			<li><a href="../../education">Education</a></li>
+			<li><a href="../../contact">Contact Info</a></li>
+			<li><a href="../../about_me">About Me</a></li>
+		</ul>
+		<ul>
+                      	<li><a href="." style="padding: 5px 10px;color:white;background-color:black;">Sort Visualization</a></li>
+		</ul>
+	</nav>
+	<body>
+		<p>To be implemented.</p>
+		<canvas id="visualize_sort" width="800px" height="500px" style="border: 1px solid black;">
+			Visualization of various sorting algorithms.
+		</canvas>
+		<form id="sort_choice">
+			<label for="algorithm">Algorithm:</label>
+			<select name="algorithm" id="algorithm">
+				<option value="bubble">Bubble Sort</option>
+			</select>
+			<label for="size">Size:</label>
+			<select name="size" id="size">
+				<option value="5">5</option>
+				<option value="10">10</option>
+				<option value="50">50</option>
+				<option value="100">100</option>
+			</select>
+			<input type="submit" id="restart" name="Start">
+		</form>
+	</body>
+</html>
+
