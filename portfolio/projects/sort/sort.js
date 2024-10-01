@@ -1,9 +1,9 @@
 let canvas;
 let ctx;
 
-let num_elems;
 let algo;
-const elem5 = [];
+let length;
+const elems = [];
 
 // Event listeners
 window.addEventListener("load", init);
@@ -15,27 +15,35 @@ function init()
 {
 	canvas = document.getElementById("visualize_sort");
 	ctx = canvas.getContext("2d");
-	run();
 }
 
 // Runs the animation.
-function run()
+function run(elems, algo)
 {
 	// ctx.fillRect(10, 10, 50, 50);
 }
 
 function restart()
 {
-	// Restarts the sort.
+	for (let i = 0; i < length; i++) elems.pop();
+	algo = document.forms["sort_choice"]["algorithm"].value;
+	length = document.forms["sort_choice"]["size"].value;
+	for (let i = 0; i < length; i++) elems.push(i+1);
+	randomize(elems);
+	run(elems, algo);
 }
 
 
-function randomize()
+function randomize(elems)
 {
-	// Randomizes the elements.
+	for (let i = 0; i < elems.length; i++) 
+	{
+		let j = Math.floor(Math.random() * i);
+		[elems[i], elems[j]] = [elems[j], elems[i]];
+	}
 }
 
-function bogo()
+function bubble()
 {
 	// While not sorted, randomize.
 }
